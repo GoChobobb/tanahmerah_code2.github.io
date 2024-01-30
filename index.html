@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tanah Merah Resort</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+
+}
+
+#hero {
+    margin-top: 150px;
+    font-family:Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    /* Add other navbar styles as needed */
+}
+
+.navbar-brand img {
+    max-height: 60px;
+    margin-top: 5px;
+    margin-left: 50PX;
+    /* Add other styles for navbar-brand as needed */
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 30px;
+    margin-top: 30px;
+    display: flex;
+    /* Add other styles for navbar-nav as needed */
+}
+
+.nav-item {
+    margin-right: 0px;
+    font-size: 17px;
+    /* Add other styles for nav-item as needed */
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0px;
+    margin-right: 25px;
+    /* Add other styles for nav-link as needed */
+}
+
+.BgColour {
+    transition: all 1s;
+    background-color:#8c1207;
+    /* Add other styles for BgColour as needed */
+}
+@media only screen and (max-width: 992px) {
+  .navbar-nav {
+    display: none;
+  }
+  .navbar-toggler {
+    display: block;
+  }
+  .navbar-collapse {
+    display: none;
+    position: fixed;
+    top: 70px; /* Adjust as needed */
+    left: 0;
+    right: 0;
+    background-color: #8c1207;
+    z-index: 999;
+    padding: 10px 0;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-item {
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-brand img {
+    max-height: 40px; /* Decrease logo size for smaller screens */
+    margin-left: 20px; /* Adjust logo margin */
+  }
+  .navbar-collapse {
+    top: 60px; /* Adjust as needed */
+  }
+  .navbar-toggler {
+    top: 15px; /* Adjust as needed */
+  }
+  .nav-link {
+    margin-right: 0; /* Remove right margin for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar-brand img {
+    max-height: 30px; /* Decrease logo size further for smaller screens */
+    margin-left: 10px; /* Further adjust logo margin */
+  }
+  .navbar-collapse {
+    top: 50px; /* Adjust as needed */
+  }
+  .navbar-toggler {
+    top: 10px; /* Further adjust as needed */
+  }
+  .nav-item {
+    margin: 8px 0; /* Further adjust item margin */
+  }
+}
+/* The CSS styles for the slider without the button */
+.slidr-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slidr {
+  display: flex;
+}
+
+.slid {
+  position: relative;
+  flex: 0 0 100%;
+  transition: opacity 0.5s;
+}
+
+.slid img {
+  width: 100%;
+  height: auto;
+}
+
+.tekx {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.slid.active .text {
+  opacity: 1;
+}
+      #about {
+        font-size: 16px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding: 40px;
+        line-height: 28px;
+        font-weight: 400;
+      }
+      #adds {
+        background: orange;
+        height: 180px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      .booknow {
+        font-weight: 600;
+        font-size: 23px;
+        color: #ffffff;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      #booknow {
+        background-color: orange;
+        border: 0.5px solid rgb(255, 255, 255);
+        border-radius: 50px;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-left: 30px;
+      }
+
+      #booknow:hover {
+        background-color: #ffffff;
+        color: orange;
+        border-color: orange;
+      }
+
+      #esepsi{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+      }
+      .esepsi {
+        margin-top: 50px;
+        font-weight: 500;
+        color: rgb(107, 107, 107);
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      .carousel-container {
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 0 30px -20px #223344;
+  margin: auto;
+  z-index: 0;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: auto;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 0 8px 8px 0;
+  background: rgba(173, 216, 230, 0.1);
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(173, 216, 230, 0.3);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  background-color: rgba(10, 10, 20, 0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.number {
+  color: #f2f2f2;
+  font-size: 16px;
+  background-color: rgba(173, 216, 230, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.dots-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+/* The dots/bullets/indicators */
+.dots {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+  margin: 0 4px;
+  background-color: rgba(173, 216, 230, 0.2);
+  backdrop-filter: blur(2px);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.active,
+.dots:hover {
+  background-color: rgba(173, 216, 230, 0.8);
+}
+
+/* transition animation */
+.animate {
+  -webkit-animation-name: animate;
+  -webkit-animation-duration: 1s;
+  animation-name: animate;
+  animation-duration: 2s;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1.1) rotateY(10deg);
+  }
+  to {
+    transform: scale(1) rotateY(0deg);
+  }
+}
+
+      .container {
+    width: 95%;
+}
+
+
+      .container1{
+        margin: 0 180px;
+        padding-top: 80px;
+      }
+      .akomodasi {
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        display: flex;
+      }
+      .akomodasi2 {
+        font-weight: 500;
+        color: #515151;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      .image-collage {
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        padding-bottom: 40px;
+      }
+
+      .image-collage img {
+        width: 100%;
+        object-fit: cover;
+        padding-bottom: 1px;
+      }
+
+      
+      .akomodasi-pool{
+        font-weight: 500;
+        color: #515151;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        padding-bottom: 30px;
+      }
+
+      .image-collage2 {
+  display: flex;
+  gap: 8px;
+}
+
+.image-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-link img {
+  width: 100%;
+  height: auto;
+  transition: transform .5s ease;
+}
+
+.image-link:hover img {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 0, 0, 0.5);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.image-link:hover .image-overlay {
+  height: 100%;
+}
+
+.image-overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+      .wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #ff0000;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+  left: 35px;
+}
+
+.wrapper i:last-child {
+  right: 50px;
+}
+
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) );
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* for Internet Explorer */
+  margin-top: 50px;
+  margin: 100px;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  height: 250px;
+  width: 400px;
+  list-style: none;
+  background: #ff2727;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.carousel .card:hover {
+  transform: translateY(-5px);
+}
+
+.carousel .card .img {
+  background: #070014;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.card .img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+
+.carousel .card span {
+  color: #6A6D78;
+  font-size: 1.31rem;
+}
+
+.reviews-section {
+  background-image: url(bahan/39\ rumah.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  height: 80vh;
+  margin-top: 50px;
+}
+.reviews-section h2{
+  margin-top: 100px;
+}
+
+.review {
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .wrapper i {
+    height: 40px;
+    width: 40px;
+    font-size: 1rem;
+  }
+  
+  .carousel .card {
+    height: 200px;
+  }
+}
+      .fasilitas {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    overflow-x: hidden; 
+    margin-top: 20px;
+    font-weight: 100;
+    color: #515151;
+    padding-bottom: 50px;
+}
+.fasilitas h2{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding-bottom: 50px;
+}
+
+#fasilitas2 {
+    display: flex;
+    flex-wrap: wrap;
+    transition: opacity 0.5s ease;
+    justify-content: space-between; /* Mengubah ini agar gambar memiliki jarak yang sama */
+    align-items: center; 
+}
+
+#fasilitas2 a {
+    flex: 0 0 45%; /* Mengubah ini agar gambar memiliki ukuran yang sama */
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    margin: 5px; 
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+
+}
+
+#fasilitas2 a p{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+#fasilitas2 a img {
+    max-width: 100%;
+    height: auto;
+}
+
+#fasilitas2 a:hover {
+    opacity: 0.5;
+}
+
+/* Responsive Styles for Tablets and Mobile Devices */
+@media only screen and (max-width: 768px) {
+    #fasilitas2 a {
+        flex: 0 0 45%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #fasilitas2 a {
+        flex: 0 0 100%;
+    }
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 2rem;
+}
+ul{
+  list-style: none;
+  padding-left: 0; /* Menghapus padding default pada list */
+}
+.footer{
+  background-color: #8c1207;
+  padding: 70px 0 0 0;
+  
+}
+.footer-col{
+    width: 30%;
+   padding: 0 0 0 60px;
+   margin-bottom: 20px; /* Menambahkan jarak antar baris */
+}
+#sosmed{
+   padding:0 30px 0 70px;
+   width: 20%;
+}
+
+#pics{
+    margin-left: 10px;
+    padding-left: 60px;
+    margin-top: 30px;
+    line-height: 100px;
+    border-width: 10px;
+}
+.footer-col h4{
+  font-size: 20px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #ff0000;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li{
+    display: flex;
+}
+
+.footer-col ul li i{
+    margin-right: 10px;
+    color: rgb(198, 198, 198);
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #ffffff;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #bababa;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  opacity: 50%;
+}
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.containerfoot{
+    background-color: #540b05;
+    color: #ffffff;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#sertifikat{
+    position: absolute;
+    white-space: nowrap;
+    margin-top: -35px;
+    font-size: 10px;
+    margin-left: 7px;
+    color: #000;
+    font-weight: bold;
+
+}
+#sertifikat2{
+    margin-left: 40px;
+    font-weight: 10px;
+    position: absolute;
+    margin-top: -20px;
+    text-decoration:underline;
+    color: #000;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar sticky">
+        <a class="navbar-brand" href="#">
+          <img src="bahan/logo tanah merah.png" alt="Tanah Merah Logo">
+        </a>
+        <!-- <button class="navbar-toggler">
+          <i class="fa-solid fa-bars"></i>
+        </button> -->
+        <div class="navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About Us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="timor.html">Accommodation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Facilities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tours</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Guest Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact Us.html">Contact Us</a>
+            </li>
+          </nav>
+          </div>
+      </ul>
+    </header>
+
+
+<!-- The HTML structure for the slider without the button -->
+<div class="slidr-container">
+  <div class="slidr">
+    <div class="slid">
+      <img src="bahan/home-ganesha.jpg" alt="Slide 1">
+      <div class="tekx">
+        <h2>Slide 1</h2>
+        <p>Deskripsi Slide 1</p>
+      </div>
+    </div>
+    <div class="slid">
+      <img src="bahan/home-ganesha.jpg" alt="Slide 2">
+      <div class="tekx">
+        <h2>Slide 2</h2>
+        <p>Deskripsi Slide 2</p>
+      </div>
+    </div>
+    <div class="slid">
+      <img src="bahan/home-ganesha.jpg" alt="Slide 3">
+      <div class="tekx">
+        <h2>Slide 3</h2>
+        <p>Deskripsi Slide 3</p>
+      </div>
+    </div>
+    <div class="slid">
+      <img src="bahan/home-ganesha.jpg" alt="Slide 3">
+      <div class="tekx">
+        <h2>Slide 3</h2>
+        <p>Deskripsi Slide 3</p>
+      </div>
+    </div>
+    <div class="slid">
+      <img src="bahan/home-ganesha.jpg" alt="Slide 3">
+      <div class="tekx">
+        <h2>Slide 3</h2>
+        <p>Deskripsi Slide 3</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <section id="about">
+        <div class="container">
+          <p>
+            Perched high above the magnificent Petanu river gorge with breathtaking tropical rainforest views and private access to the river and waterfall, Tanah Merah Art Resort offers an unmatched experience of artistic indulgence and
+            blissful tranquility.
+          </p>
+          <p>
+            This enchanting art resort features 31 artistically designed villas and luxury studios which have been dressed in the warm colors of the genuine Bali and lovingly decorated with exquisite Indonesian art, antiques, and furniture.
+          </p>
+          <p>
+            Our trademark is the unique Tanah Merah Collection and Gallery which displays an unsurpassed private collection of oriental paintings, antiques and textiles, celebrating the fascinating history of Indonesia going back 2000
+            years.
+          </p>
+          <p>The busy and artistic town of Ubud is just a ten-minute drive away on one of Bali’s most scenic routes with panoramic views of the iconic rice terraces and majestic volcanos.</p>
+        </div>
+      </section>
+      <section id="adds">
+        <div class="container">
+          <h1 class="booknow">Book your stay with us this season <button id="booknow">Book Now</button></h1>
+        </div>
+      </section>
+      <section id="esepsi">
+        <div class="container">
+          <h1 class="esepsi">5 EXCEPTIONAL REASONS TO CHOOSE TANAH MERAH ART RESORT</h1>
+          <div class="carousel-container">
+            <div class="mySlides animate">
+              <img src="bahan/Tanah-Merah-Art-Resort_birdview ft img.jpg" alt="slide" />
+              <div class="number">1 / 5</div>
+              <div class="text">Unique location with an unspoiled view to rainforest and river – relax your mind and spirit</div>
+            </div>
+          
+            <div class="mySlides animate">
+              <img src="bahan/IMG_2017.jpg" alt="slide" />
+              <div class="number">2 / 5</div>
+              <div class="text">Proud to present Bali’s most outstanding art collection – free entrance for resort guests</div>
+            </div>
+          
+            <div class="mySlides animate">
+              <img src="bahan/IMG_0020.jpg" alt="slide" />
+              <div class="number">3 / 5</div>
+              <div class="text">Artistically designed villas and studios – get a genuine feeling of Bali’s unique cultural beauty</div>
+            </div>
+          
+            <div class="mySlides animate">
+              <img src="bahan/sawah tanah.jpg" alt="slide" />
+              <div class="number">4 / 5</div>
+              <div class="text">Unparalleled short scenic shuttle route to Ubud center– enjoy rice field terraces and mountains</div>
+            </div>
+          
+            <div class="mySlides animate">
+              <img src="bahan/cewek-mandi.jpg" alt="slide" />
+              <div class="number">5 / 5</div>
+              <div class="text">Own direct access to river Petanu – swim and cool off under local waterfall and holy springs</div>
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="prevSlide()">&#10094;</a>
+            <a class="next" onclick="nextSlide()">&#10095;</a>
+          
+            <!-- The dots/circles -->
+            <div class="dots-container">
+              <span class="dots" onclick="currentSlide(1)"></span>
+              <span class="dots" onclick="currentSlide(2)"></span>
+              <span class="dots" onclick="currentSlide(3)"></span>
+              <span class="dots" onclick="currentSlide(4)"></span>
+              <span class="dots" onclick="currentSlide(5)"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section id="akomodasi">
+        <div class="container1">
+          <h1 class="akomodasi">ACCOMMODATION</h1>
+          <p class="akomodasi2">Choose from a variety of sizes and styles.</p>
+          <div class="image-collage">
+            <a href="#" class="image-link">
+              <img src="bahan/timur-cottage-thum.jpg" alt="Image 1"/>
+              <div class="image-overlay">
+                <div class="image-overlay-content">
+                  <h2>TIMOR COTTAGES</h2>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="image-link">
+              <img src="bahan/bali-villas.jpg" alt="Image 2"/>
+              <div class="image-overlay">
+                <div class="image-overlay-content">
+                  <h2>BALI VILLAS</h2>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="image-link">
+              <img src="bahan/gladak2.jpg" alt="Image 3" />
+              <div class="image-overlay">
+                <div class="image-overlay-content">
+                  <h2>VILLA GLADAK</h2>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="image-link">
+              <img src="bahan/villa-gardenia-thumb.jpg" alt="Image 4" />
+              <div class="image-overlay">
+                <div class="image-overlay-content">
+                  <h2>VILLA GARDENIA</h2>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="image-link">
+              <img src="bahan/villa-pohon-26.jpg" alt="Image 5" />
+              <div class="image-overlay">
+                <div class="image-overlay-content">
+                  <h2>VILLA POHON</h2>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="image-link">
+              <img src="bahan/front-studios.jpg" alt="Image 6" />
+              <div class="image-overlay">
+                <div class="image-overlay-content">
+                  <h2>DELUXE STUDIOS</h2>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="image-link">
+              <img src="bahan/Rumah-Bintang-Kuning-2.jpg" alt="Image 7" />
+              <div class="image-overlay">
+                <div class="image-overlay-content">
+                  <h2>RUMAH BINTANG KUNING</h2>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="image-link">
+              <img src="bahan/Rumah-Bintang-Kuning-with-Balcony.jpg" alt="Image 8" />
+              <div class="image-overlay">
+                <div class="image-overlay-content">
+                  <h2>RUMAH BINTANG KUNING WITH BALCONY</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <section id="akomodasi-pool">
+        <div class="container1">
+          <h2 class="akomodasi-pool">ACCOMMODATION WITH PRIVATE POOL</h2>
+          <div class="image-collage2">
+            <a href="#" class="image-link">
+              <img src="bahan/MadsLange2.jpg" alt="Image 1">
+              <div class="image-overlay">
+                <div class="image-overlay-content">
+                  <h2>MADS LANGE VILLAS</h2>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="image-link">
+              <img src="bahan/villabintang.jpeg" alt="Image 2">
+              <div class="image-overlay">
+                <div class="image-overlay-content">
+                  <h2>VILLA BINTANG</h2>
+                </div>
+              </div>
+            </a>
+            <a href="#" class="image-link">
+              <img src="bahan/Villaa-Bojog.jpg" alt="Image 3">
+              <div class="image-overlay">
+                <div class="image-overlay-content">
+                  <h2>VILLA BOJOG</h2>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="review">
+        <div id="review">
+          <div class="reviews-section">
+            <h2>Guest Review</h2>
+            <div class="wrapper">
+              <i id="left" class="fa-solid fa-angle-left"></i>
+              <ul class="carousel">
+                <li class="card">
+                  <p>The Hotel's atmosphere is amazing, the big pool has a perfect view. I think, they should develop their restaurant and also they organise rooms like the floor. Finally, if you have some problems with insects and lizards you shouldn't choose this hotel. It's inside of a jungle.</p>
+                  <h3>Rodneyaarup</h3>
+                </li>
+                <li class="card">
+                  <P>Great place but a little bit aged. Worth staying: location; swimming pools; rooms are great. Staff is amazing. Dr Peter , the owner, is a really nice person always interesting to talk with. Restaurant can be improved with few touches. I have good memories. Thanks!!</P>
+                  <h3>Davide Cattaneo</h3>
+                </li>
+                <li class="card">
+                  <p>All the staff were so friendly and accomodating, and helped us organise tours around the local area. It's a lovely location that has walking access to a waterfall as well. The room was clean and spacious, the pool areas were beautiful too.</p>
+                  <h3>Neena Carter</h3>
+                </li>
+                <li class="card">
+                  <p>the resort is extremely well positioned on some hills and offers outstanding accommodation rooms</p>
+                  <h3>Theodor P</h3>
+                </li>
+                <li class="card">
+                  <p>Fantastic place. not like any other resort i have ever seen</p>
+                  <h3>Janrossel1</h3>
+                </li>
+                <li class="card">
+                  <p>“Tanah Merah Art Resort - genuine Balinese style, beautifully situated, great rooms, perfect staff”</p>
+                  <h3>Rodneyaarup</h3>
+                </li>
+              </ul>
+              <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+      </section>
+
+      <section class="fasilitas">
+        <div class="container">
+          <h2 id="fasilitas">FACILITIES</h2>
+          <div id="fasilitas2">
+            <a href="#"><img src="bahan/lobbytanah.jpg" alt="Gambar 1" /><p>Lobbyl</p></a>
+            <a href="#"><img src="bahan/collectiontanah.jpg" alt="Gambar 2" /><p>The Collection</p></a>
+            <a href="#"><img src="bahan/gallery1tanah.jpg" alt="Gambar 3" /><p> The Gallery </p></a>
+            <a href="#"><img src="bahan/madstanah.jpeg" alt="Gambar 4" /><p>Mads Lange Collection</p></a>
+            <a href="#"><img src="bahan/GardeniaRestaurant-tanah.jpg" alt="Gambar 5" /><p>Gardenia Restaurant</p></a>
+            <a href="#"><img src="bahan/rest-petanutanah.jpg" alt="Gambar 6" /><p>Petanu Restaurant</p></a>
+            <a href="#"><img src="bahan/kan-kullaktanah.jpeg" alt="Gambar 7" /><p>Kan Kulak Gallery Restaurant</p></a>
+            <a href="#"><img src="bahan/skybartanah.jpg" alt="Gambar 8" /><p>The Sky Bar</p></a>
+            <a href="#"><img src="bahan/skywarungtanah.jpg" alt="Gambar 9" /><p>The Sky Warung</p></a>
+            <a href="#"><img src="bahan/petanu-swimming-pooltanah.jpeg" alt="Gambar 10" /><p>Petanu Swimming Pool</p></a>
+            <a href="#"><img src="bahan/gardenia-swimming-pooltanah.jpeg" alt="Gambar 11" /><p>Gardenia Swimming Pool</p></a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Tanah Merah Art Resort</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="#">Jalan Melayang, Ubud, Bali 80571, Indonesia.</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="#">+62 361 898 7952 | +62 361 898 7955</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="#">info@tanahmerahartresort.com</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="#">www.tanahmerahbali.com</a></li>
+                    </ul>
+                </div>                
+                <div id="sosmed" class="footer-col">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                      <a href="https://www.facebook.com/Ubudhotelandresort/"><img src="bahan/2587943_facebook_media_social_icon1.png" alt=""/></a>
+                      <a href="https://www.instagram.com/tanahmerahubud/"><img src="bahan/2587941_instagram_media_social_icon1.png" alt=""/></a>
+                    </div>
+                </div>
+                <div id="pics" class="footer-col">
+                    <div class="social-links">
+                        <a href="https://www.tripadvisor.com/Hotel_Review-g1628287-d676948-Reviews-Tanah_Merah_Art_Resort-Melayang_Ubud_Gianyar_Regency_Bali.html">
+                        <p id="sertifikat">
+                            Certificate of Excellence 2016</p>
+                            <h6 id="sertifikat2"> Read Reviews</h6>
+                            <img src="bahan/tripvasor.png" alt="">
+                        </a>
+                    </div>
+                        <img src="bahan/CHSE.png" alt="">
+                    </a>
+                </div>                
+            </div>
+        </div>
+        <div class="containerfoot">
+            <div id="row">
+                <div class="footer-col5">
+                    <p>© 2017 Tanah Merah Art Resort</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="scripts.js"></script>
+  </body>
+</html>

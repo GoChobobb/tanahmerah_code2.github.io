@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tanah Merah Resort</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+
+}
+
+#hero {
+    margin-top: 150px;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8c1207;
+    /* Add other navbar styles as needed */
+}
+
+.navbar-brand img {
+    max-height: 60px;
+    margin-top: 5px;
+    margin-left: 50PX;
+    /* Add other styles for navbar-brand as needed */
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 30px;
+    margin-top: 30px;
+    display: flex;
+    /* Add other styles for navbar-nav as needed */
+}
+
+.nav-item {
+    margin-right: 0px;
+    font-size: 17px;
+    /* Add other styles for nav-item as needed */
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0px;
+    margin-right: 25px;
+    /* Add other styles for nav-link as needed */
+}
+
+.BgColour {
+    transition: all 1s;
+    background-color:#8c1207;
+}
+.headline img{
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+#about{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 100px;
+}
+#figuran{
+    text-align: center;
+    padding: 0 70px 100px 70px;
+    line-height: 30px;
+    text-indent: 38px;
+}
+#adds {
+        background: orange;
+        height: 180px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-bottom: 80px;
+      }
+      .booknow {
+        font-weight: 600;
+        font-size: 23px;
+        color: #ffffff;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+      #booknow {
+        background-color: orange;
+        border: 0.5px solid rgb(255, 255, 255);
+        border-radius: 50px;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-left: 30px;
+      }
+
+      #booknow:hover {
+        background-color: #ffffff;
+        color: orange;
+        border-color: orange;
+      }
+      .room-details {
+    width: 1100px; /* Lebar kotak detail */
+    padding: 0 200px 100px; /* Jarak antara konten dan tepi kotak */
+}
+
+.detail {
+    display: flex;
+    justify-content: flex-start; /* Mengubah ini menjadi flex-start */
+}
+
+.title {
+    font-weight: bold;
+    flex-basis: 50px; /* Menentukan lebar awal untuk judul */
+    flex-grow: 1; /* Memungkinkan judul untuk tumbuh jika ada ruang ekstra */
+}
+
+.description {
+    text-align: left;
+    justify-self: end;
+    margin-left: 50px; /* Menambahkan margin kiri sebanyak 50px */
+    flex-basis: calc(100% - 250px); /* Menentukan lebar awal untuk deskripsi */
+    flex-grow: 1; /* Memungkinkan deskripsi untuk tumbuh jika ada ruang ekstra */
+    padding-bottom: 15px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #b6b6b6; /* Garis pembatas antara detail */
+    padding-top: 20px;
+}
+/* CSS */
+.container3 {
+  position: relative;
+   max-width: 600px; /* Sesuaikan dengan lebar slider */
+   margin: 0 auto;
+   overflow: hidden;
+}
+
+
+#main-Img {
+   width: 100%;
+   transition: transform 0.8s;
+   z-index: 1;
+   height: 400px;
+}
+.thumb {
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.thumb ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  transition: transform 0.8s ;
+}
+
+
+
+.thumb li {
+  margin-right: 10px; /* Jarak antar thumbnail */
+}
+
+.thumb img {
+  width: 100px; /* Sesuaikan dengan lebar thumbnail */
+  height: 80px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+
+}
+
+.thumb img:hover {
+  opacity: 0.7;
+}
+
+.arrows {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  justify-content: space-between;
+
+}
+
+.arrows button {
+  background: none;
+  border: none;
+  font-size: 50px;
+  cursor: pointer;
+  color: azure;
+}
+#next {
+  position: absolute;
+  right: -550px;
+  bottom: 50px;
+}
+
+#prev {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+
+.stack {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 50px; /* Sesuaikan dengan tinggi stack */
+}
+
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 2rem;
+}
+ul{
+  list-style: none;
+  padding-left: 0; /* Menghapus padding default pada list */
+}
+.footer{
+  background-color: #8c1207;
+  padding: 70px 0 0 0;
+  
+}
+.footer-col{
+    width: 30%;
+   padding: 0 0 0 60px;
+   margin-bottom: 20px; /* Menambahkan jarak antar baris */
+}
+#sosmed{
+   padding:0 30px 0 70px;
+   width: 20%;
+}
+
+#pics{
+    margin-left: 10px;
+    padding-left: 60px;
+    margin-top: 30px;
+    line-height: 100px;
+    border-width: 10px;
+}
+.footer-col h4{
+  font-size: 20px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #ff0000;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li{
+    display: flex;
+}
+
+.footer-col ul li i{
+    margin-right: 10px;
+    color: rgb(198, 198, 198);
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #ffffff;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #bababa;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  opacity: 50%;
+}
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.containerfoot{
+    background-color: #540b05;
+    color: #ffffff;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#sertifikat{
+    position: absolute;
+    white-space: nowrap;
+    margin-top: -35px;
+    font-size: 10px;
+    margin-left: 7px;
+    color: #000;
+    font-weight: bold;
+
+}
+#sertifikat2{
+    margin-left: 40px;
+    font-weight: 10px;
+    position: absolute;
+    margin-top: -20px;
+    text-decoration:underline;
+    color: #000;
+}
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar sticky">
+          <a class="navbar-brand" href="#">
+              <img src="bahan/logo tanah merah.png" alt="Tanah Merah Logo">
+          </a>
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="About Us.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="timor.html">Accommodation</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Facilities</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Tours</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Guest Reviews</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Contact Us.html">Contact Us</a>
+              </li>
+          </ul>
+      </nav>
+  </header>
+
+  <section class="headline">
+    <div class="container">
+      <img src="bahan/timor-slide (1).jpg" alt="">
+    </div>
+  </section>
+  <section class="about-us">
+      <h2 id="about">TIMOR COTTAGES</h2>
+      <div id="figuran">
+      <p>The two Timor Cottages at Tanah Merah Art Resort originate from the island of Timor in Eastern Indonesia and are beautifully decorated with traditional designs by master woodcarvers.
+        Each of the raised cottages accommodates you with a cozy room, a modern bathroom with shower and bathtub as well as a spacious veranda for relaxing and enjoying the lush surroundings. Set in peaceful tropical gardens close to the infinity pool and restaurant, our Timor Cottages offer superb value with their unique ambiance and spectacular rainforest views. Both cottages are fit for two persons.</p>
+    </div>
+    </div>
+  </section>
+  <section id="adds">
+    <div class="container">
+      <h1 class="booknow">Book this room today and reserve your spot <button id="booknow">Book Now</button></h1>
+    </div>
+  </section>
+
+  <div class="room-details">
+    <div class="detail">
+        <div class="title">View</div>
+        <div class="description">Tropical garden views</div>
+    </div>
+    <hr>
+    <div class="detail">
+        <div class="title">Bed</div>
+        <div class="description">1 King Bed or 2 Single Beds</div>
+    </div>
+    <hr>
+    <div class="detail">
+        <div class="title">Bathroom</div>
+        <div class="description">En suite bathroom with bathtub and overhead shower </div>
+    </div>
+    <hr>
+    <div class="detail">
+        <div class="title">Max Occupancy</div>
+        <div class="description">2 persons</div>
+    </div>
+    <hr>
+    <div class="detail">
+        <div class="title">Amenities</div>
+        <div class="description">Free WIFI, Air-conditioning, mini bar, electronic safe, tea/coffee maker, hairdryer, private veranda.</div>
+    </div>
+    <hr>
+</div>
+
+<div class="container3">
+  <img src="bahan/timor-cottages2.jpg" alt="" id="main-Img">
+  <div class="thumb">
+    <ul>
+      <li><img src="bahan/timor-cottages2.jpg" alt=""></li>
+      <li><img src="bahan/timor-cottages3.jpg" alt=""></li>
+      <li><img src="bahan/timor-cottages-bathroom-800x600.jpg" alt=""></li>
+      <li><img src="bahan/timor-cottages4.jpg" alt=""></li>
+    </ul>
+  </div>
+  <div class="stack"></div>
+  <div class="arrows">
+    <button id="prev">&#10094;</button>
+    <button id="next">&#10095;</button>
+  </div>
+</div>
+
+
+
+      <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Tanah Merah Art Resort</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="#">Jalan Melayang, Ubud, Bali 80571, Indonesia.</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="#">+62 361 898 7952 | +62 361 898 7955</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="#">info@tanahmerahartresort.com</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="#">www.tanahmerahbali.com</a></li>
+                    </ul>
+                </div>                
+                <div id="sosmed" class="footer-col">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                      <a href="https://www.facebook.com/Ubudhotelandresort/"><img src="bahan/2587943_facebook_media_social_icon1.png" alt=""/></a>
+                      <a href="https://www.instagram.com/tanahmerahubud/"><img src="bahan/2587941_instagram_media_social_icon1.png" alt=""/></a>
+                    </div>
+                </div>
+                <div id="pics" class="footer-col">
+                    <div class="social-links">
+                        <a href="https://www.tripadvisor.com/Hotel_Review-g1628287-d676948-Reviews-Tanah_Merah_Art_Resort-Melayang_Ubud_Gianyar_Regency_Bali.html">
+                        <p id="sertifikat">
+                            Certificate of Excellence 2016</p>
+                            <h6 id="sertifikat2"> Read Reviews</h6>
+                            <img src="bahan/tripvasor.png" alt="">
+                        </a>
+                    </div>
+                        <img src="bahan/CHSE.png" alt="">
+                    </a>
+                </div>                
+            </div>
+        </div>
+        <div class="containerfoot">
+            <div id="row">
+                <div class="footer-col5">
+                    <p>© 2017 Tanah Merah Art Resort</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+      const tabs= document.querySelectorAll('.tab_btn');
+const all_content= document.querySelectorAll('.content')
+
+tabs.forEach((tab, index)=>{
+ tab.addEventListener('click', ()=>{
+    tabs.forEach(tab=>{tab.classList.remove('active')});
+    tab.classList.add('active');
+
+    var line=document.querySelector('.line');
+    line.style.width = tab.offsetWidth + "px";
+    line.style.left = tab.offsetLeft + "px";
+
+    all_content.forEach(content=>{content.classList.remove('active')});
+    all_content[index].classList.add('active')
+ })
+})
+
+// JavaScript
+// Mendapatkan elemen-elemen yang dibutuhkan
+let mainImg = document.getElementById("main-Img"); // Gambar utama
+let prev = document.getElementById("prev"); // Tombol sebelumnya
+let next = document.getElementById("next"); // Tombol selanjutnya
+let thumb = document.getElementsByClassName("thumb")[0]; // Kontainer thumbnail
+let imgs = thumb.getElementsByTagName("img"); // Thumbnail gambar
+let index = 0; // Indeks gambar saat ini
+
+// Fungsi untuk mengubah gambar utama
+function changeImg(n) {
+  mainImg.src = imgs[n].src; // Mengganti sumber gambar utama dengan thumbnail yang dipilih
+  index = n; // Mengubah indeks gambar saat ini
+}
+
+// Fungsi untuk menampilkan gambar sebelumnya atau selanjutnya
+function slideImg(n) {
+  const prevArrow = document.getElementById("prev");
+  const nextArrow = document.getElementById("next");
+
+  if (index === 0 && n === -1) {
+    // If it's the first image and the user clicks "previous", wrap around to the last image
+    index = imgs.length - 1;
+  } else if (index === imgs.length - 1 && n === 1) {
+    // If it's the last image and the user clicks "next", wrap around to the first image
+    index = 0;
+  } else {
+    index += n;
+  }
+
+  if (n > 0) {
+    // If the user clicks "next", move the main image to the right
+    mainImg.style.transition = "transform 0.5s ease-out";
+    mainImg.style.transform = "translateX(-100%)";
+  } else {
+    // If the user clicks "previous", move the main image to the left
+    mainImg.style.transition = "transform 0.5s ease-out";
+    mainImg.style.transform = "translateX(100%)";
+  }
+
+  setTimeout(function () {
+    mainImg.src = imgs[index].src;
+    mainImg.style.transform = "translateX(0)";
+
+    if (index === 0) {
+      prevArrow.style.display = "none";
+    } else if (index === imgs.length - 1) {
+      nextArrow.style.display = "none";
+    } else {
+      prevArrow.style.display = "block";
+      nextArrow.style.display = "block";
+    }
+  }, 500);
+}
+
+// Menambahkan event listener untuk tombol sebelumnya dan selanjutnya
+prev.addEventListener("click", function () {
+  slideImg(-1); // Memanggil fungsi slideImg dengan parameter -1 untuk menampilkan gambar sebelumnya
+});
+next.addEventListener("click", function () {
+  slideImg(1); // Memanggil fungsi slideImg dengan parameter 1 untuk menampilkan gambar selanjutnya
+});
+
+// Menambahkan event listener untuk setiap thumbnail gambar
+for (let i = 0; i < imgs.length; i++) {
+  imgs[i].addEventListener("click", function () {
+    changeImg(i); // Memanggil fungsi changeImg dengan parameter i untuk menampilkan gambar yang dipilih
+  });
+  // Menambahkan efek opacity untuk thumb class
+  imgs[i].style.opacity = 0.5; // Mengatur opacity awal menjadi 0.5
+  imgs[i].addEventListener("mouseover", function () { // Ketika mouse berada di atas thumbnail
+    this.style.opacity = 1; // Mengubah opacity menjadi 1
+  });
+  imgs[i].addEventListener("mouseout", function () { // Ketika mouse keluar dari thumbnail
+    this.style.opacity = 0.5; // Mengubah opacity menjadi 0.5
+  });
+}
+    </script>
+  </body>
+</html>

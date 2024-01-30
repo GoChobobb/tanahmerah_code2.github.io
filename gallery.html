@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tanah Merah Resort</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+
+}
+
+#hero {
+    margin-top: 150px;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8c1207;
+    /* Add other navbar styles as needed */
+}
+
+.navbar-brand img {
+    max-height: 60px;
+    margin-top: 5px;
+    margin-left: 50PX;
+    /* Add other styles for navbar-brand as needed */
+}
+
+.navbar-nav {
+    list-style: none;
+    margin: 30px;
+    margin-top: 30px;
+    display: flex;
+    /* Add other styles for navbar-nav as needed */
+}
+
+.nav-item {
+    margin-right: 0px;
+    font-size: 17px;
+    /* Add other styles for nav-item as needed */
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0px;
+    margin-right: 25px;
+    /* Add other styles for nav-link as needed */
+}
+
+.BgColour {
+    transition: all 1s;
+    background-color:#8c1207;
+}
+.container1{
+  display: inline-block;
+  box-shadow: 0 2px 16pxrgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.tab_box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgba(229,229,229);
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  margin: 100px 0 0 0;
+}
+.tab_box .tab_btn{
+  font-size: 18px;
+  font-weight: 600;
+  color: #919191;
+  background: none;
+  border: none;
+  padding: 18px;
+  cursor: pointer;
+}
+.tab_box .tab_btn.active{
+  color: #8c1207;
+}
+.content_box .content{
+  display: none;
+}
+.content_box .content.active{
+  display: block;
+}
+.container2 {
+  position: relative;
+  min-height: 100vh;
+}
+
+.container2 .image-container {
+  margin: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container2 .image-container .imagee {
+  position: relative; /* Tambahkan ini untuk memungkinkan overlay pada gambar */
+  height: 170px;
+  width: 190px;
+  border: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.container2 .image-container .imagee img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear;
+}
+
+.container2 .image-container .imagee:hover img {
+  transform: scale(1.2);
+}
+
+.container2 .popup-image {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+
+.container2 .popup-image img {
+  border: 3px solid #fff;
+  border-radius: 5px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.container2 .popup-image span {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+@media (max-width: 750px) {
+  .container2 .popup-image img {
+    width: 95%;
+  }
+}
+
+/* Hapus duplikat .popup-image */
+
+
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 2rem;
+}
+ul{
+  list-style: none;
+  padding-left: 0; /* Menghapus padding default pada list */
+}
+.footer{
+  background-color: #8c1207;
+  padding: 70px 0 0 0;
+  
+}
+.footer-col{
+    width: 30%;
+   padding: 0 0 0 60px;
+   margin-bottom: 20px; /* Menambahkan jarak antar baris */
+}
+#sosmed{
+   padding:0 30px 0 70px;
+   width: 20%;
+}
+
+#pics{
+    margin-left: 10px;
+    padding-left: 60px;
+    margin-top: 30px;
+    line-height: 100px;
+    border-width: 10px;
+}
+.footer-col h4{
+  font-size: 20px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #ff0000;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li{
+    display: flex;
+}
+
+.footer-col ul li i{
+    margin-right: 10px;
+    color: rgb(198, 198, 198);
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #ffffff;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #bababa;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  opacity: 50%;
+}
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.containerfoot {
+  background-color: #540b05;
+  color: #ffffff;
+  font-size: 18px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+#sertifikat{
+    position: absolute;
+    white-space: nowrap;
+    margin-top: -35px;
+    font-size: 10px;
+    margin-left: 7px;
+    color: #000;
+    font-weight: bold;
+
+}
+#sertifikat2{
+    margin-left: 40px;
+    font-weight: 10px;
+    position: absolute;
+    margin-top: -20px;
+    text-decoration:underline;
+    color: #000;
+}
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar sticky">
+          <a class="navbar-brand" href="#">
+              <img src="bahan/logo tanah merah.png" alt="Tanah Merah Logo">
+          </a>
+          <ul class="navbar-nav">
+              <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="About Us.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="timor.html">Accommodation</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Facilities</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Tours</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Guest Reviews</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Contact Us.html">Contact Us</a>
+              </li>
+          </ul>
+      </nav>
+  </header>
+    <section class="gallery">
+      <div class="container">
+        <h2 id="gallery">GALLERY</h2>
+      </div>
+
+
+      <div class="tab_box">
+        <button class="tab_btn active" id="rooms_btn">Rooms & Villas</button>
+        <button class="tab_btn" id="restaurant_btn">Restaurant & Bar</button>
+        <button class="tab_btn" id="collection_btn">The Collection</button>
+        <button class="tab_btn" id="gallery_btn">The Gallery</button>
+        <div class="line"></div>
+      </div>
+      <div class="container1">
+        <div class="container2">
+          <div id="rooms_content" class="tab_content active">
+            <div class="image-container">
+              <div class="imagee"><img src="bahan/Villa_Pohon1.jpg"></div>
+              <div class="imagee"><img src="bahan/Villa_Pohon_2.jpg"></div>
+              <div class="imagee"><img src="bahan/Villa_Pohon_3.jpg"></div>
+              <div class="imagee"><img src="bahan/Villa_Pohon_4.jpeg"></div>
+              <div class="imagee"><img src="bahan/Villa_Pohon 5.jpeg"></div>
+              <div class="imagee"><img src="bahan/VillaGladak1.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaGladak2.jpeg"></div>
+              <div class="imagee"><img src="bahan/VillaGladak_3.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaGladak_4.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaGardenia1.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaGardenia2.jpeg"></div>
+              <div class="imagee"><img src="bahan/VillaGardenia_3.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaGardenia_4.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaGardenia_5.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaGardenia_6.jpeg"></div>
+              <div class="imagee"><img src="bahan/Villa_Bojog1.jpeg"></div>
+              <div class="imagee"><img src="bahan/VillaBojog2.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaBojog_3.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaBojog_4.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaBojog_5.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaBojog_6.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaBojog_7.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaBintang 1.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaBintang_2.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaBintang 3.jpg"></div>
+              <div class="imagee"><img src="bahan/VillaBintang_4.jpg"></div>
+              <div class="imagee"><img src="bahan/TimorCottages 1.jpeg"></div>
+              <div class="imagee"><img src="bahan/TimorCottages 2.jpg"></div>
+              <div class="imagee"><img src="bahan/TimorCottages_3.jpg"></div>
+              <div class="imagee"><img src="bahan/TimorCottages_4.jpg"></div>
+              <div class="imagee"><img src="bahan/TimorCottages_5.jpg"></div>
+              <div class="imagee"><img src="bahan/RumahBintangKuningwithBalcony 1.jpg"></div>
+              <div class="imagee"><img src="bahan/RumahBintangKuningwithBalcony_2.jpg"></div>
+              <div class="imagee"><img src="bahan/RumahBintangKuning 1.jpg"></div>
+              <div class="imagee"><img src="bahan/RumahBintangKuning_2.jpg"></div>
+              <div class="imagee"><img src="bahan/MadsLangeVilla 1.jpg"></div>
+              <div class="imagee"><img src="bahan/MadsLangeVilla_2.jpg"></div>
+              <div class="imagee"><img src="bahan/MadsLangeVilla_3.jpg"></div>
+              <div class="imagee"><img src="bahan/MadsLangeVilla 4.jpg"></div>
+              <div class="imagee"><img src="bahan/MadsLangeVilla_5.jpg"></div>
+              <div class="imagee"><img src="bahan/DeluxeStudios_1.jpg"></div>
+              <div class="imagee"><img src="bahan/DeluxeStudios_2.jpg"></div>
+              <div class="imagee"><img src="bahan/DeluxeStudios_3.jpg"></div>
+              <div class="imagee"><img src="bahan/DeluxeStudios 4.jpg"></div>
+              <div class="imagee"><img src="bahan/BaliVillas 1.jpg"></div>
+              <div class="imagee"><img src="bahan/BaliVillas_2.jpg"></div>
+              <div class="imagee"><img src="bahan/BaliVillas_3.jpg"></div>
+              <div class="imagee"><img src="bahan/BaliVillas_4.jpg"></div>
+              <div class="imagee"><img src="bahan/BaliVillas_5.jpg"></div>
+            </div>
+          </div>
+          <div class="popup-image" id="popup1">
+            <span onclick="closeImagePopup('popup1')">X</span>
+            <img src="bahan/WiranataBar1.jpg" alt="">
+          </div>
+        </div>
+      </div>
+
+
+        <div class="container2">
+          <div class="image-container">
+              <div class="imagee"><img src="bahan/WiranataBar1.jpg"></div>
+              <div class="imagee"><img src="bahan/WiranataBar_2.jpg"></div>
+              <div class="imagee"><img src="bahan/WiranataBar_3.jpg"></div>
+              <div class="imagee"><img src="bahan/WiranataBar_4.jpg"></div>
+              <div class="imagee"><img src="bahan/TheSkyBar_1.jpg"></div>
+              <div class="imagee"><img src="bahan/TheSkyBar_2.jpg"></div>
+              <div class="imagee"><img src="bahan/TheSkyBar_3.jpg"></div>
+              <div class="imagee"><img src="bahan/TheSkyBar_4.jpg"></div>
+              <div class="imagee"><img src="bahan/TheSkyBar 5.jpg"></div>
+              <div class="imagee"><img src="bahan/TheSkyBar_6.jpeg"></div>
+              <div class="imagee"><img src="bahan/TheSkyBar 7.jpeg"></div>
+              <div class="imagee"> <img src="bahan/SayangSpa 1.jpeg"></div>
+              <div class="imagee"><img src="bahan/PetanuRestaurant_1.jpg"></div>
+              <div class="imagee"><img src="bahan/PetanuRestaurant_2.jpg"></div>
+              <div class="imagee"> <img src="bahan/kan-kullaktanah.jpeg"></div>
+              <div class="imagee"><img src="bahan/GardeniaRestaurant_1.jpg"></div>
+              <div class="imagee"><img src="bahan/GardeniaRestaurant_2.jpg"></div>
+              <div class="imagee"><img src="bahan/GardeniaRestaurant_3.jpg"></div>
+              <div class="imagee"><img src="bahan/GardeniaRestaurant_4.jpg"></div>
+              <div class="imagee"><img src="bahan/GardeniaRestaurant_5.jpg"></div>
+          </div>
+          <div class="popup-image">
+            <span onclick="closeImagePopup()">X</span>
+            <img src="bahan/WiranataBar1.jpg" alt="">
+          </div>
+        </div>
+        
+        <div class="container2">
+          <div class="image-container">
+              <div class="imagee"><img src="bahan/TheCollection_1.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_2.jpg"></div>
+              <div class="imagee"><img src="bahan/The_Collection3.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_4.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_5.jpg"></div>
+              <div class="imagee"><img src="bahan/The_Collection6.jpg"></div>
+              <div class="imagee"><img src="bahan/The_Collection7.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_8.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_9.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_10.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_11.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_12.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_13.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_41.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_15.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_16.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_17.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_18.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_19.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_20.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_21.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection 22.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_23.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_24.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_25.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_26.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_27.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_28.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_29.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_30.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_31.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_32.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_33.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_34.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_35.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_36.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_37.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_38.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_339.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_40.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_41.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_42.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_43.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_44.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_45.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_46.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_47.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection 48.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_49.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_50.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_51.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_52.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_53.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_54.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_55.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_56.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_57.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_58.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_59.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_60.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_61.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_62.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_63.jpg"></div>
+              <div class="imagee"><img src="bahan/TheCollection_64.jpg"></div>
+          </div>
+          <div class="popup-image">
+            <span onclick="closeImagePopup()">X</span>
+            <img src="bahan/WiranataBar1.jpg" alt="">
+          </div>
+        </div>
+
+
+          <div class="container2">
+            <div class="image-container">
+                <div class="imagee"><img src="bahan/TheGallery_1.jpg"></div>
+                <div class="imagee"><img src=" bahan/TheGallery_2.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_3.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_4.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_5.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_6.jpg"></div>
+                <div class="imagee"><img src=" bahan/TheGallery 7.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_8.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_9.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_10.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_11.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_12.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_12.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_13.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_14.jpg"></div>
+                <div class="imagee"><img src=" bahan/TheGallery_15.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_16.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_17.jpg"></div>
+                <div class="imagee"><img src=" bahan/TheGallery_18.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_19.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_20.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_21.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_22.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_23.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_24.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_25.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_26.jpg"></div>
+                <div class="imagee"><img src="bahan/TheGallery_27.jpg"></div>
+              </div>
+            <div class="popup-image">
+              <span onclick="closeImagePopup()">X</span>
+              <img src="bahan/WiranataBar1.jpg" alt="">
+            </div>
+          </div>
+
+      <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Tanah Merah Art Resort</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <a href="#">Jalan Melayang, Ubud, Bali 80571, Indonesia.</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="#">+62 361 898 7952 | +62 361 898 7955</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="#">info@tanahmerahartresort.com</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="#">www.tanahmerahbali.com</a></li>
+                    </ul>
+                </div>                
+                <div id="sosmed" class="footer-col">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                      <a href="https://www.facebook.com/Ubudhotelandresort/"><img src="bahan/2587943_facebook_media_social_icon1.png" alt=""/></a>
+                      <a href="https://www.instagram.com/tanahmerahubud/"><img src="bahan/2587941_instagram_media_social_icon1.png" alt=""/></a>
+                    </div>
+                </div>
+                <div id="pics" class="footer-col">
+                    <div class="social-links">
+                        <a href="https://www.tripadvisor.com/Hotel_Review-g1628287-d676948-Reviews-Tanah_Merah_Art_Resort-Melayang_Ubud_Gianyar_Regency_Bali.html">
+                        <p id="sertifikat">
+                            Certificate of Excellence 2016</p>
+                            <h6 id="sertifikat2"> Read Reviews</h6>
+                            <img src="bahan/tripvasor.png" alt="">
+                        </a>
+                    </div>
+                        <img src="bahan/CHSE.png" alt="">
+                    </a>
+                </div>                
+            </div>
+        </div>
+        <div class="containerfoot">
+            <div id="row">
+                <div class="footer-col5">
+                    <p>© 2017 Tanah Merah Art Resort</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const tabs = document.querySelectorAll('.tab_btn');
+  const all_content = document.querySelectorAll('.content');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      // Menghapus kelas 'active' dari semua tab
+      tabs.forEach((t) => t.classList.remove('active'));
+      // Menambahkan kelas 'active' ke tab yang diklik
+      tab.classList.add('active');
+
+      // Mengatur panjang dan posisi garis bawah
+      var line = document.querySelector('.line');
+      line.style.width = tab.offsetWidth + 'px';
+      line.style.left = tab.offsetLeft + 'px';
+
+      // Menampilkan konten yang sesuai dengan tab yang diklik
+      all_content.forEach((content) => content.classList.remove('active'));
+      all_content[index].classList.add('active');
+    });
+  });
+
+  // Menambahkan event listener untuk setiap gambar di galeri
+  document.querySelectorAll('.imagee').forEach((image) => {
+    image.addEventListener('click', () => {
+      openImagePopup(image.querySelector('img').src);
+    });
+  });
+
+  // Menambahkan event listener untuk menutup popup gambar
+  document.querySelector('.popup-image span').addEventListener('click', () => {
+    closeImagePopup();
+  });
+});
+
+// Fungsi untuk membuka popup gambar dengan gambar yang dipilih
+function openImagePopup(imageSrc) {
+  var popupImage = document.getElementById('popup1'); // Ubah ID elemen sesuai dengan HTML Anda
+  popupImage.querySelector('img').src = imageSrc;
+  popupImage.style.display = 'flex';
+}
+
+// Fungsi untuk menutup popup gambar
+function closeImagePopup() {
+  document.getElementById('popup1').style.display = 'none'; // Ubah ID elemen sesuai dengan HTML Anda
+}
+
+    </script>
+  </body>
+</html>
